@@ -4,14 +4,26 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-  ## 页面热加载
+  # 页面热加载
   thymeleaf:
     cache: false
-  ## 环境端口
+  # 环境端口
   profiles:
     active: prod
 
-## 日志生成
+management:
+  endpoints:
+    web:
+      # 暴露endpoint
+      exposure:
+        include: "*"
+    shutdown:
+        # 启用shutdown
+        enabled: true
+        # 禁用密码验证
+        sensitive: false
+
+# 日志生成
 logging:
   file: file=exam1/exam1.log
   level:
