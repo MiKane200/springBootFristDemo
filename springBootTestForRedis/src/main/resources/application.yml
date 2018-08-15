@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.99.100:3306/sakila
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # 页面热加载
+  thymeleaf:
+    cache: false
+  # 环境端口
+  profiles:
+    active: prod
+  # 安全配置
+  security:
+    user:
+      name: root
+      password: root
+
+management:
+  endpoints:
+    web:
+      # 暴露endpoint
+      exposure:
+        include: "*"
+    shutdown:
+        # 启用shutdown
+        enabled: true
+        # 禁用密码验证
+        sensitive: false
+# 日志生成
+logging:
+  file: file=exam1/exam1.log
+  level:
+    org:
+      srpingframework:
+        web: DEBUG

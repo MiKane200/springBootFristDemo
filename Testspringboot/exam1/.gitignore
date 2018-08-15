@@ -127,7 +127,7 @@ $RECYCLE.BIN/
 *.lnk
 
 target/
-*/Exam*.jar
+/*/*/Exam*.jar
 /*/target/
 buildbackup.sh
 *.sh___jb_tmp___

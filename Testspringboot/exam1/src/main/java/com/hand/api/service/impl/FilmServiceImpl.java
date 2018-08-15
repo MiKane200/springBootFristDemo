@@ -21,7 +21,7 @@ import tk.mybatis.mapper.util.Sqls;
 @Transactional(rollbackFor = Exception.class)
 public class FilmServiceImpl implements FilmService {
 
-    private final static Logger logger = LoggerFactory.getLogger(FilmService.class);
+    private Logger logger = LoggerFactory.getLogger(getClass());
 
     @Autowired
     private FilmMapper filmMapper;
